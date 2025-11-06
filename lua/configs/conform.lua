@@ -5,6 +5,7 @@ local options = {
     cpp = { "clang-format" },
     go = { "gofmt" },
     html = { "prettier" },
+    rust = { "rust-analyzer" },
   },
 
   format_on_save = {
