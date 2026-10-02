@@ -24,6 +24,8 @@ return {
         "cpp",
         "go",
         "rust",
+        "markdown",
+        "markdown_inline",
       },
     },
   },
@@ -38,4 +40,11 @@ return {
   --     require("black-metal").load()
   --   end,
   -- },
+
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    ft = { "markdown" },
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {},
+  },
 }

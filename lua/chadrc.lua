@@ -2,10 +2,8 @@
 local M = {}
 
 M.base46 = {
-  theme = "marduk",
-  -- theme = "mountain",
-  theme_toggle = { "marduk", "ayu_light" },
-  -- theme_toggle = { "mountain", "ayu_light" },
+  theme = "gruvchad",
+  theme_toggle = { "gruvchad", "gruvbox_light" },
 
   hl_override = {
     Comment = { italic = true },
