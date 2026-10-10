@@ -7,7 +7,8 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- personals
 do
-  vim.keymap.set("n", "<leader>t", vim.cmd.tabnew, { desc = "New tab" })
+  vim.keymap.set("n", "<leader>nt", vim.cmd.tabnew, { desc = "New tab" })
+  vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" })
   --vim.keymap.set("n", "<leader>t", function()
   --  local name = "unamed"
   --  vim.ui.input({ prompt = "Tab Name: " },
@@ -94,7 +95,8 @@ vim.diagnostic.config {
     end,
   },
 }
--- vim.diagnostic.enable(true)
+
+vim.diagnostic.enable(true)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 vim.keymap.set("n", "<leader>td", function()
         vim.diagnostic.enable(not vim.diagnostic.is_enabled())

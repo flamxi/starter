@@ -36,13 +36,12 @@ vim.api.nvim_create_autocmd('PackChanged', {
 
 
 vim.pack.add({
-  "https://github.com/rebelot/kanagawa.nvim",
+  "https://github.com/akinsho/toggleterm.nvim",
   "https://github.com/saghen/blink.cmp",
   "https://github.com/L3MON4D3/LuaSnip",
   "https://github.com/nvim-lua/plenary.nvim",
   "https://github.com/nvim-tree/nvim-web-devicons",
   "https://github.com/nvim-lualine/lualine.nvim",
-  "https://github.com/tiagovla/scope.nvim",
 	{
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
 		branch = "main",
@@ -69,6 +68,8 @@ vim.pack.add({
   "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
 
   "https://github.com/lewis6991/gitsigns.nvim",
+  "https://github.com/nvim-mini/mini.comment",
+  "https://github.com/folke/which-key.nvim",
 
 	-- "https://github.com/obsidian-nvim/obsidian.nvim",
 	"https://github.com/mrcjkb/rustaceanvim",
@@ -78,15 +79,15 @@ require "setups.dev_icons"
 require "setups.tree_sitter"
 require "setups.lsp"
 require "setups.telescope"
-
--- require "setups.kanagawa"
-vim.opt.rtp:prepend(vim.fn.stdpath "config" .. "/void")
-vim.g.void_accent = "green" -- "green" | "amber"
-vim.o.background = "dark" -- "dark" | "light"; :VoidToggle switches at runtime
-vim.cmd.colorscheme "void"
-
 require "setups.lualine"
 
 require('gitsigns').setup()
--- require("scope").setup()
+require('mini.comment').setup()
+require('which-key').setup()
+require('toggleterm').setup {
+  open_mapping = [[<c-\>]], -- normal, insert and terminal mode
+  direction = 'float',
+  float_opts = { border = 'curved' },
+}
+-- require('rustaceanvim').setup()
 

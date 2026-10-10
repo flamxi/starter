@@ -19,7 +19,7 @@ vim.opt.smartcase = true -- case sensitive if uppercase in string
 vim.opt.hlsearch = false -- highlight search matches
 vim.opt.incsearch = true -- show matches as you type
 
-vim.opt.signcolumn = "no"
+vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "140"
 vim.opt.cursorlineopt = "number"
 

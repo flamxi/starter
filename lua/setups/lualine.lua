@@ -30,18 +30,10 @@ local sections = {
       },
       {
         'diagnostics',
-
-        -- Table of diagnostic sources, available sources are:
-        --   'nvim_lsp', 'nvim_diagnostic', 'nvim_workspace_diagnostic', 'coc', 'ale', 'vim_lsp'.
-        -- or a function that returns a table as such:
-        --   { error=error_cnt, warn=warn_cnt, info=info_cnt, hint=hint_cnt }
         sources = { 'nvim_diagnostic'},
-
-        -- Displays diagnostics for the defined severity types
         sections = { 'error', 'warn', 'info', 'hint' },
 
         diagnostics_color = {
-          -- Same values as the general color option can be used here.
           error = 'DiagnosticError', -- Changes diagnostics' error color.
           warn  = 'DiagnosticWarn',  -- Changes diagnostics' warn color.
           info  = 'DiagnosticInfo',  -- Changes diagnostics' info color.
@@ -110,7 +102,7 @@ lualine.setup {
     lualine_e = {},
     lualine_x = {{
       -- Nerd Font: nf-md-weather_night (U+F0594) / nf-md-white_balance_sunny (U+F05A8)
-      function() return vim.o.background == 'dark' and '\243\176\150\148' or '\243\176\150\168' end,
+      function() return vim.o.background == 'light' and '\243\176\150\148' or '\243\176\150\168' end,
       on_click = function() require('void').toggle() end,
     }},
     lualine_z = {{'datetime', style = '%H:%M'}},

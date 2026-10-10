@@ -1,8 +1,12 @@
-vim.loader.enable()
+vim.opt.rtp:prepend(vim.fn.stdpath "config" .. "/void")
+
+vim.g.void_accent = "green" -- "green" | "amber"
+vim.o.background = "dark" -- "dark" | "light"; :VoidToggle switches at runtime
+vim.cmd.colorscheme "void"
 
 vim.schedule(function()
-  require "options"
-  require "mappings"
+  require ("options")
+  require ("mappings")
   require ("plugins")
 end)
 
