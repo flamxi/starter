@@ -79,8 +79,13 @@ require "setups.tree_sitter"
 require "setups.lsp"
 require "setups.telescope"
 
+-- require "setups.kanagawa"
+vim.opt.rtp:prepend(vim.fn.stdpath "config" .. "/void")
+vim.g.void_accent = "green" -- "green" | "amber"
+vim.o.background = "dark" -- "dark" | "light"; :VoidToggle switches at runtime
+vim.cmd.colorscheme "void"
+
 require "setups.lualine"
-require "setups.kanagawa"
 
 require('gitsigns').setup()
 -- require("scope").setup()
