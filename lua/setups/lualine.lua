@@ -71,7 +71,7 @@ local lualine = require("lualine")
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = 'seoul256',
+    theme = 'void',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
