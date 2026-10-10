@@ -99,3 +99,4 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set("n", "<leader>td", function()
         vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end, { desc = "Toggle diagnostics" })
+vim.keymap.set("n", "<C-t><C-t>", function() require("void").toggle() end, { desc = "Toggle void dark/light" })

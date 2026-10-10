@@ -108,7 +108,11 @@ lualine.setup {
     lualine_b = {{'buffers', mode = 2, symbols = {alternate_file = ''}}},
     lualine_c = {},
     lualine_e = {},
-    lualine_x = {},
+    lualine_x = {{
+      -- Nerd Font: nf-md-weather_night (U+F0594) / nf-md-white_balance_sunny (U+F05A8)
+      function() return vim.o.background == 'dark' and '\243\176\150\148' or '\243\176\150\168' end,
+      on_click = function() require('void').toggle() end,
+    }},
     lualine_z = {{'datetime', style = '%H:%M'}},
   },
   winbar = {
