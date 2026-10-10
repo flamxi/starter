@@ -68,6 +68,10 @@
       "rev": "fa9037326e9996381e34a14b6350e18168618532",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
+    "mini.starter": {
+      "rev": "25de4998197d59673f1918968a8f4060195edca0",
+      "src": "https://github.com/nvim-mini/mini.starter"
+    },
     "mini.statusline": {
       "rev": "b5547f44560dae3ccd81f914256fa6f705837022",
       "src": "https://github.com/nvim-mini/mini.statusline",
