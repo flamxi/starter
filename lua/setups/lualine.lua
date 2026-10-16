@@ -44,8 +44,8 @@ local sections = {
       --   update_in_insert = false, -- Update diagnostics in insert mode.
       --   always_visible = true,   -- Show diagnostics even if there are none.
       -- },
+      'encoding',
       'filetype',
-      -- 'encoding',
       --{
       -- 'fileformat',
       --    symbols = {
@@ -55,7 +55,7 @@ local sections = {
       --    }
       --},
     },
-    lualine_y = {'encoding', 'progress'},
+    lualine_y = {'location', 'progress'},
     lualine_z = {}
 }
 

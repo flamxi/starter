@@ -1,3 +1,19 @@
+local config = {
+  sort = {
+    sorter = "case_sensitive",
+  },
+  view = {
+    width = 30,
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = false,
+  },
+}
+require("nvim-tree").setup(config)
+
 require'nvim-web-devicons'.setup {
  -- your personal icons can go here (to override)
  -- you can specify color or cterm_color instead of specifying both of them

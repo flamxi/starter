@@ -7,6 +7,7 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- personals
 do
+  vim.keymap.set("n", "<C-n>", vim.cmd.NvimTreeToggle, { desc = "Toggle Tree" })
   vim.keymap.set("n", "<leader>nt", vim.cmd.tabnew, { desc = "New tab" })
   vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" })
   --vim.keymap.set("n", "<leader>t", function()
