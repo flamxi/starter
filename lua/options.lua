@@ -16,7 +16,7 @@ vim.opt.autoindent = true -- copy indent from current line
 
 vim.opt.ignorecase = true -- case insensitive search
 vim.opt.smartcase = true -- case sensitive if uppercase in string
-vim.opt.hlsearch = false -- highlight search matches
+vim.opt.hlsearch = true -- highlight search matches
 vim.opt.incsearch = true -- show matches as you type
 
 vim.opt.signcolumn = "yes"
@@ -36,7 +36,7 @@ vim.opt.concealcursor = "" -- do not hide cursorline in markup
 vim.opt.synmaxcol = 300 -- syntax highlighting limit
 vim.opt.fillchars = { eob = " " } -- hide "~" on empty lines
 
-local undodir = vim.fn.expand("~/.vim/undodir")
+local undodir = vim.fn.expand "~/.vim/undodir"
 if
   vim.fn.isdirectory(undodir) == 0 -- create undodir if nonexistent
 then
@@ -58,11 +58,11 @@ vim.opt.hidden = true -- allow hidden buffers
 vim.opt.errorbells = false -- no error sounds
 vim.opt.backspace = "indent,eol,start" -- better backspace behaviour
 vim.opt.autochdir = false -- do not autochange directories
-vim.opt.iskeyword:append("-") -- include - in words
-vim.opt.path:append("**") -- include subdirs in search
+vim.opt.iskeyword:append "-" -- include - in words
+vim.opt.path:append "**" -- include subdirs in search
 vim.opt.selection = "inclusive" -- include last char in selection
 vim.opt.mouse = "a" -- enable mouse support
-vim.opt.clipboard:append("unnamedplus") -- use system clipboard
+vim.opt.clipboard:append "unnamedplus" -- use system clipboard
 vim.opt.modifiable = true -- allow buffer modifications
 
 -- vim.opt.guicursor = "n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175" -- cursor blinking and settings
@@ -77,10 +77,12 @@ vim.opt.splitright = true -- vertical splits go right
 
 vim.opt.wildmenu = true -- tab completion
 vim.opt.wildmode = "longest:full,full" -- complete longest common match, full completion list, cycle through with Tab
-vim.opt.diffopt:append("linematch:60") -- improve diff display
+vim.opt.diffopt:append "linematch:60" -- improve diff display
 
 vim.o.breakindent = true
 vim.o.updatetime = 250
 vim.o.timeoutlen = 300
 vim.o.confirm = true
-vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
+vim.schedule(function()
+  vim.o.clipboard = "unnamedplus"
+end)

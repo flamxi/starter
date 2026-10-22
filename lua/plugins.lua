@@ -36,6 +36,9 @@ vim.pack.add {
   "https://github.com/lewis6991/gitsigns.nvim",
   "https://github.com/nvim-mini/mini.comment",
   "https://github.com/folke/which-key.nvim",
+
+  -- "https://github.com/folke/tokyonight.nvim",
+  "https://github.com/catppuccin/nvim",
 }
 
 require "setups.nvim_tree"
@@ -44,7 +47,6 @@ require "setups.lsp"
 require "setups.telescope"
 require "setups.lualine"
 require "setups.defaults"
--- require('rustaceanvim').setup()
 
 local function run_build(name, cmd, cwd)
   local result = vim.system(cmd, { cwd = cwd }):wait()

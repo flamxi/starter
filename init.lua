@@ -1,12 +1,8 @@
-vim.opt.rtp:prepend(vim.fn.stdpath "config" .. "/void")
+-- vim.opt.rtp:prepend(vim.fn.stdpath "config" .. "/void")
 
-vim.g.void_accent = "green" -- "green" | "amber"
-vim.o.background = "dark" -- "dark" | "light";
-vim.cmd.colorscheme "void"
-
-require ("options")
-require ("mappings")
-require ("plugins")
+require "options"
+require "mappings"
+require "plugins"
 
 -- vim.api.nvim_create_autocmd("VimEnter", {
 --   callback = function()
@@ -18,3 +14,5 @@ require ("plugins")
 --   end,
 -- })
 
+vim.o.background = "dark" -- "dark" | "light";
+vim.cmd.colorscheme "catppuccin-frappe"
